@@ -1,0 +1,31 @@
+/* *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: gilroy;
+}
+
+html,body{
+  height: 100%;
+  width: 100%;
+} */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  color: #fff;
+}
+
+body{
+  background-color: #081c31;
+}
+
+#AlltaskList::-webkit-scrollbar{
+display: none;
+}
+
+#TaskAdminList::-webkit-scrollbar{
+  display: none;
+}
