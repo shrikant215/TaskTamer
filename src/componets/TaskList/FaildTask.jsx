@@ -1,11 +1,13 @@
 import React from 'react'
+import TodayIcon from '@mui/icons-material/Today';
+import AccessTimeIcon from '@mui/icons-material/AccessTime';
 
 const FaildTask = ({ele}) => {
   return (
-    <div className='bg-yellow-600 w-[350px] h-full p-5 rounded-2xl flex flex-col justify-between flex-shrink-0 '>
+    <div className='bg-yellow-600 w-[350px] h-full p-5 rounded-2xl flex flex-col justify-between flex-shrink-0 border-l border-purple-600'>
          <div className='flex item-end justify-between'>
              <button className='bg-red-600 px-3 py-1 rounded'>{ele.category}</button>
-             <h1>{ele.date}</h1>
+             <h1 className='flex items-center gap-1 opacity-60'><TodayIcon />{ele.date}</h1>
          </div>
          <div className='flex flex-col font-medium gap-2 mt-6'>
              <span className='text-xl'>{ele.title}</span>
@@ -14,6 +16,7 @@ const FaildTask = ({ele}) => {
          <div className='flex m-3 '>
            {/* <button className='bg-red-600 rounded px-4 py-1 item-end'>Completed</button> */}
            <button className='bg-green-600 rounded px-4 py-1'>Faild</button>
+           <div className='flex items-center gap-1 opacity-60'><AccessTimeIcon /> 20 min</div>
          </div>
        </div>
   )

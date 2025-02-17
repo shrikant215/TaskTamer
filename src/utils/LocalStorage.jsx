@@ -198,7 +198,7 @@ localStorage.setItem('employees', JSON.stringify(employees) );
 localStorage.setItem('admin', JSON.stringify(admin) );
 
   }
-  // setLocalStorage()
+  setLocalStorage()
   // localStorage.clear()
 
 

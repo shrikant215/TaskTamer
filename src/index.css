@@ -19,7 +19,7 @@ html,body{
 }
 
 body{
-  background-color: #081c31;
+  background-color: #15171E;
 }
 
 #AlltaskList::-webkit-scrollbar{
@@ -28,4 +28,19 @@ display: none;
 
 #TaskAdminList::-webkit-scrollbar{
   display: none;
+}
+
+#signinButton{
+  outline: none;
+  border: none;
+}
+
+#signinButton{
+  background-color: #A855F7;
+  color: #fff;
+  transition: 0.2s;
+}
+#signinButton:hover{
+  background-color: #fff;
+  color: #A855F7;
 }

@@ -6,7 +6,7 @@ import FaildTask from '../TaskList/FaildTask'
 
 export default function AllTaskLists({data}) {
   return (
-    <div id='AlltaskList' className='flex justify-start gap-4  h-[55%] py-5 mt-10 overflow-x-auto flex-nowrap mx-4 bg-gray-800'>
+    <div id='AlltaskList' className='flex justify-start gap-4  h-[55%] py-5 mt-10 overflow-x-auto flex-nowrap mx-4 bg-black-200'>
 
       {data.tasks.map((ele, idx) => {
         

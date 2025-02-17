@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-// import AccountCircleRoundedIcon from '@mui/icons-material/AccountCircleRounded';
+import LocalPostOfficeIcon from '@mui/icons-material/LocalPostOffice';
+import PasswordIcon from '@mui/icons-material/Password';
 
 const Login = ({handleLogin}) => {
   const [email, setEmail] = useState("");
@@ -16,41 +17,48 @@ const Login = ({handleLogin}) => {
   };
   return (
     <div className="flex h-screen w-screen items-center justify-evenly bg-white font-medium flex-row gap-[3rem]  ">
-      <div className="flex flex-col  items-center justify-center w-full h-full bg-gray-800">
-    <h1 className="font-medium text-gray-700 text-3xl text-center">Employee Mangement System</h1>
-    {/* <AccountCircleRoundedIcon /> */}
-      <div className=" p-20 rounded-2xl">
+      <div className="flex flex-col  items-center justify-center w-full h-full bg-[#15171E]">
+    <h1 className="font-medium text-purple-500 text-5xl text-center">TaskTamer</h1>
+    <h1 className="font-medium text-white-500 mt-2 text-l text-center">Welcome back to TaskTamer!</h1>
+      <div className=" p-5 bg-[#1C1E27] rounded-xl mt-6 w-[32%] shadow-[0_4px_10px_rgba(0,0,0,0.3)]">
+        <div className="m-2 mb-8 text-xl">Signin</div>
         <form
           onSubmit={(e) => {
             submitHandler(e);
           }}
-          className="flex flex-col item-center justify-center"
+          className="flex flex-col item-center justify-star"
         >
+          <div id="inputs" className="py-3 flex gap-4 p-3 border-black-900 rounded-xl placeholder-gray border mb-2">
+          <LocalPostOfficeIcon />
+
           <input
             onChange={(e) => setEmail(e.target.value)}
             value={email}
             required
-            className="font-medium text-gray-500 outline-none bg-transparent placeholder-gray border-2 border-black-900 rounded-full py-3 px-5"
+            className="font-medium text-white outline-none bg-transparent   "
             type="email"
-            placeholder="Enter your email"
-          />
+            placeholder="Email"
+         />
+          </div>
+
+          <div className="py-3 flex gap-4 p-3 border-black-900 rounded-xl placeholder-gray border ">
+            <PasswordIcon />
           <input
           onChange={(e) => setPassword(e.target.value)}
             value={password}
             required
-            className="font-medium text-gray-500 outline-none bg-transparent placeholder-gray border-2 border-black-900 rounded-full mt-5 py-3 px-5"
+            className="font-medium text-white outline-none bg-transparent "
             type="password"
-            placeholder="Enter your password"
+            placeholder="Password"
           />
-          <button className="font-medium text-white outline-none placeholder-white border-2 bg-emerald-600 rounded-full  mt-5 py-3 px-5">
-            Log in
+          </div>
+          <button id="signinButton" className=" font-bold text-xl text-purple-800  outline-none placeholder-white border-2 bg-white rounded-xl  mt-5 py-3 ">
+            SignIn
           </button>
+          <div className="flex items-center justify-center m-3 gap-2">Don't have an account? <span className="text-purple-500 font-bold">Sing Up</span></div>
+
         </form>
       </div>
-      </div>
-
-      <div className="w-full">
-        <img className="w-[70%] h-auto" src="https://img.freepik.com/free-vector/login-concept-illustration_114360-739.jpg?t=st=1732632447~exp=1732636047~hmac=91b2522ed8ab71d620717de6785062364209cdb395176a2ca45748e933f10d45&w=740" alt="" />
       </div>
     </div>
   );
